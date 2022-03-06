@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (val().trim().indexOf("Hallo")<0) fail("Text \"Hallo\" im Eingabebereich");
+            if (val().trim().indexOf("Welt")<0) fail("Text \"Welt\" im Eingabebereich");
+            if (res().find("br").length<1) fail("HTML-Tag für Zeilenumbruch zwischen beiden Worten");
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 2</h1>
+        <p>Jetzt wollen wir unser erstes Tag schreiben. Mach das "Hallo" und "Welt" jeweils in einer eigenen Zeile stehen. Füge das <span class="tag">BR</span>- Tag zwischen den beiden W&ouml;rtern hinzu.</p>
+        <p><br><br></p>
+        <p class="task">Text "Hallo" im Eingabebereich</p>
+        <p class="task">Text "Welt" im Eingabebereich</p>
+        <p class="task">HTML-Tag für Zeilenumbruch zwischen beiden Worten</p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea>Hallo Welt</textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>

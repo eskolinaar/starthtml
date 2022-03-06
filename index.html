@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Start to code HTML - Index</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./scripts/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $(".test").click(() => { document.location.href="./stages/stage1.html"; });
+        });
+    </script>
+</head>
+<body>
+    <div id="headline">
+        <button class="back" disabled>Zurück</button>
+        <button class="index" disabled>Übersicht</button>
+        <button class="test">Anfangen</button>
+        <span class="clear"></span>
+    </div>
+    <div class="index">
+        <h1>HTML lernen</h1>
+        <a href="./stages/stage1.html">Schritt 1: Einfach nur Text</a>
+        <a href="./stages/stage2.html">Schritt 2: Ein Umbruch</a>
+        <a href="./stages/stage3.html">Schritt 3: Eine &Uuml;berschrift</a>
+    </div>
+</body>
+</html>

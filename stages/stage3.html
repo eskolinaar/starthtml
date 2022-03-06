@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (res().find("h1").length<1) fail("HTML-Tag für Überschrift vorhanden");
+            if (res().find("h1")[0].innerText!="Hallo Welt") fail("Text \"Hallo Welt\" ist der Inhalt des H1-Tags");
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 3</h1>
+        <p>Eine &Uuml;berschrift ist auff&auml;llig. Sie steht meist ganz oben und ist gro&szlig;, damit sie sofort auff&auml;llt. Verwende das <span class="tag">H1</span>-Tag um Hallo Welt zu einer &Uuml;berschrift zu machen. </p><p>Schreibe dazu &lt;h1&gt; am Anfang und &lt;/h1&gt; am Ende.</p>
+        <p><br><br></p>
+        <p class="task">HTML-Tag für Überschrift vorhanden</p>
+        <p class="task">Text "Hallo Welt" ist der Inhalt des H1-Tags</p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea>Hallo Welt</textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>

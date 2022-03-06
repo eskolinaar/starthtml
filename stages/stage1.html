@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            if (val().trim()=="Hallo") correct(); else fail("Text \"Hallo\" im Eingabebereich");
+        }
+    </script>
+</head>
+<body>
+    <div id="headline">
+        <button class="back">Zur&uuml;ck</button>
+        <button class="index">&Uuml;bersicht</button>
+        <button class="test">Testen</button>
+        <span class="clear"></span>
+    </div>
+    <div class="flex3">
+        <div id="exercise_description">
+            <h1>Schritt 1</h1>
+            <p>Jeder Anfang sollte einfach sein. <br><br>Schreib "Hallo" in den Eingabebereich in der Mitte, <br>sieh dir das Ergebnis auf der rechten Seite an <br>und starte die Prüfung der Aufgabe mit dem Button rechts oben.</p>
+            <p><br><br></p>
+            <p class="task">Text "Hallo" im Eingabebereich</p>
+        </div>
+        <div id="exercise_workspace">
+            <textarea></textarea>
+        </div>
+        <div id="exercise_result"></div>
+    </div>
+    <div id="feedback"></div>
+</body>
+</html>
