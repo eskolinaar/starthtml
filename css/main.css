@@ -2,6 +2,8 @@
     font-family:verdana;
 }
 
+a { color:#000; }
+
 html, body {
     margin: 0;
     padding: 0;
@@ -166,10 +168,10 @@ textarea {
     font-weight: bold;
 }
 
-.tag {
+.tag, .marked {
     background-color: #ccc;
     display: inline-block;
-    padding: 5px;
+    padding: 0px 5px;
     margin-left: 3px;
     margin-right: 3px;
     border-radius: 5px;

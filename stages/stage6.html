@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (res().find("h1").length<1) fail("HTML-Tag für Überschrift vorhanden");
+            if (res().find("p").length<1) fail("HTML-Tag für den Paragraphen vorhanden");
+            if (res().find("img").length<1) fail("Bild <b>rudi.png</b> wird angezeigt");
+            if (res().find("img").attr("src")!="rudi.png") fail("Bild <b>rudi.png</b> wird angezeigt");
+            if (val().indexOf("<!--")>=0 || val().indexOf("-->")>=0) fail("Kommentar wurde ersetzt bzw. entfernt");
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 6 - Ein Bild</h1>
+        <p>In HTML können auch Bilder angezeigt werden.</p>
+        <p>Dafür verwendet man das <span class="tag">IMG</span>-Tag. Dieses kommt ohne ein schließendes Tag aus. Wir müssen aber mit dem SRC-Attribut den Namen der Bild-Datei angeben.</p>
+        <p>Ich habe das Bild <b>rudi.png</b> vorbereitet.</p>
+        <p>Ersetze den Kommentar durch das Bild mit <span class="marked">&lt;img src=&quot;rudi.png&quot;&gt;</span>.</p>
+        <p><br><br></p>
+        <p class="task">HTML-Tag f&uuml;r &Uuml;berschrift vorhanden</p>
+        <p class="task">P-Tag f&uuml;r Textblock vorhanden</p>
+        <p class="task">Bild <b>rudi.png</b> wird angezeigt</p>
+        <p class="task">Kommentar wurde ersetzt bzw. entfernt</p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea placeholder="Schreibe hier deine Lösung rein..."><h1>Rudi der Hase</h1>
+<p>Ein Hase der die Kinderherzen höher schlagen lässt.</p>
+<!-- Ersetze den Kommentar durch das Bild. -->
+        </textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>

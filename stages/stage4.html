@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (res().find("h1").length<1) fail("HTML-Tag für Überschrift vorhanden");
+            if (res().find("h1")[0].innerText!="Katzen") fail("Text \"Katzen\" ist der Inhalt des H1-Tags");
+            if (res().find("p").length<1) fail("HTML-Tag für den Paragraphen vorhanden");
+            if (res().find("p")[0].innerText!="Diese Tiere sind in ganz Österreich beliebt.") fail("Text \"Diese Tiere sind in ganz Österreich beliebt.\" ist der Inhalt des P-Tags");
+            if (res().children().length!=2) fail("Die Lösung hat genau 2 HTML-Tags");
+            if (!res().find("h1").next()[0].tagName.toUpperCase()=="P") fail("P-Tag ist direkt nach dem H1-Tag");
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 4 - Ein Textblock</h1>
+        <p>Text wird zum einfacheren Lesen gerne Blockweise angezeigt. Diese Blöcke nennt man Paragraphen oder Absätze. Ein Paragraph wird durch das <span class="tag">P</span>-Tag gekennzeichnet.</p>
+        <p>Hänge hinter der Überschrift einen Paragraphen mit dem Text <br>&quot;Diese Tiere sind in ganz Österreich beliebt.&quot; <br>an.</p>
+        <p>Füge dazu nach dem schließenden H1-Tag (&quot;&lt;/h1&gt;&quot;) dein öffnendes <span class="tag">P</span>-Tag ein. Füge dann den Satz hinzu und beende mit dem schließenden <span class="tag">P</span>-Tag</p>
+        <p><br><br></p>
+        <p class="task">HTML-Tag für Überschrift vorhanden</p>
+        <p class="task">Text <b>Katzen</b> ist der Inhalt des H1-Tags</p>
+        <p class="task">HTML-Tag für den Paragraphen vorhanden</p>
+        <p class="task"><b>Diese Tiere sind in ganz Österreich beliebt.</b> ist Inhalt des Paragraphen</p>
+        <p class="task">Die Lösung hat genau 2 HTML-Tags</p>
+        <p class="task">P-Tag ist direkt nach dem H1-Tag</p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea placeholder="Schreibe hier deine Lösung rein..."><h1>Katzen</h1>
+
+        </textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>

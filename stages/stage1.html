@@ -11,7 +11,7 @@
     <script src="../scripts/main.js"></script>
     <script>
         window.test=() => {
-            if (val().trim()=="Hallo") correct(); else fail("Text \"Hallo\" im Eingabebereich");
+            if (val()=="hallo") correct(); else fail("Text \"Hallo\" im Eingabebereich");
         }
     </script>
 </head>
@@ -24,13 +24,13 @@
     </div>
     <div class="flex3">
         <div id="exercise_description">
-            <h1>Schritt 1</h1>
-            <p>Jeder Anfang sollte einfach sein. <br><br>Schreib "Hallo" in den Eingabebereich in der Mitte, <br>sieh dir das Ergebnis auf der rechten Seite an <br>und starte die Prüfung der Aufgabe mit dem Button rechts oben.</p>
+            <h1>Schritt 1 - Einfach nur Text</h1>
+            <p>Jeder Anfang sollte einfach sein. <br><br>Schreib <b>Hallo</b> in den Eingabebereich in der Mitte, <br>sieh dir das Ergebnis auf der rechten Seite an <br>und starte die Prüfung der Aufgabe mit dem Button rechts oben.</p>
             <p><br><br></p>
-            <p class="task">Text "Hallo" im Eingabebereich</p>
+            <p class="task">Text <b>Hallo</b> im Eingabebereich</p>
         </div>
         <div id="exercise_workspace">
-            <textarea></textarea>
+            <textarea placeholder="Schreibe hier deine Lösung rein..."></textarea>
         </div>
         <div id="exercise_result"></div>
     </div>

@@ -26,7 +26,7 @@ function init() {
 }
 
 function val() {
-    return $("#exercise_workspace textarea").val().trim();
+    return $("#exercise_workspace textarea").val().toLowerCase().trim();
 }
 
 function res() {

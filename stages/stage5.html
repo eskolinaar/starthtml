@@ -12,9 +12,9 @@
     <script>
         window.test=() => {
             initTest();
-            if (val().indexOf("hallo")<0) fail("Text \"Hallo\" im Eingabebereich");
-            if (val().indexOf("welt")<0) fail("Text \"Welt\" im Eingabebereich");
-            if (res().find("br").length<1) fail("HTML-Tag für Zeilenumbruch zwischen beiden Worten");
+            if (res().find("h1").length<1) fail("HTML-Tag für Überschrift vorhanden");
+            if (res().find("p").length<1) fail("HTML-Tag für den Paragraphen vorhanden");
+            if (val().indexOf("<!--")<0 || val().indexOf("-->")<0) fail("Kommentar vorhanden");
             elseCorrect();
         }
     </script>
@@ -28,15 +28,20 @@
 </div>
 <div class="flex3">
     <div id="exercise_description">
-        <h1>Schritt 2 - Ein Umbruch</h1>
-        <p>Zum Formatieren von HTML verwendet man so genannte <b>Tags</b>. Mach das <b>Hallo</b> und <b>Welt</b> jeweils in einer eigenen Zeile stehen. Füge dazu das <span class="tag">BR</span>- Tag zwischen den beiden W&ouml;rtern hinzu.</p>
+        <h1>Schritt 5 - Ein Kommentar</h1>
+        <p>Will man sich in HTML Notizen machen, die aber nicht angezeigt werden sollen, so nennt man das einen Kommentar.</p>
+        <p>Kommentare beginnen mit &lt;!-- und hören mit --&gt; auf.</p>
+        <p>Füge einen Kommentar hinzu.</p>
+        <p></p>
         <p><br><br></p>
-        <p class="task">Text <b>Hallo</b> im Eingabebereich</p>
-        <p class="task">Text <b>Welt</b> im Eingabebereich</p>
-        <p class="task">HTML-Tag für Zeilenumbruch zwischen beiden Worten</p>
+        <p class="task">HTML-Tag f&uuml;r &Uuml;berschrift vorhanden</p>
+        <p class="task">P-Tag f&uuml;r Textblock vorhanden</p>
+        <p class="task">Kommentar vorhanden</p>
     </div>
     <div id="exercise_workspace">
-        <textarea placeholder="Schreibe hier deine Lösung rein...">Hallo Welt</textarea>
+        <textarea placeholder="Schreibe hier deine Lösung rein..."><h1>Katzen</h1>
+<p>Interessanter Text über Katzen den wahrscheinlich niemand jemals zu Ende liest.</p>
+        </textarea>
     </div>
     <div id="exercise_result"></div>
 </div>
