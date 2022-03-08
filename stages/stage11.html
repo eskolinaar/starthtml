@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (res().find("p").length<1) fail("P-Tag für Paragraph vorhanden");
+            if (res().find("b").length<1) fail("B-Tag für Paragraph vorhanden");
+            if (res().find("b").text()!="einzelne") fail("B-Tag hebt das Wort 'einzelne' hervor");
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 11 - Text hervorheben</h1>
+        <p>Durch <b>Fettdruck</b> kann man wichtige Textpassagen aber auch einzelne Worte hervorheben.</p>
+        <p>Hebe das Wort <b>einzelne</b> hervor mit dem <span class="tag">B</span>-Tag.</p>
+        <p>Füge das öffnende B-Tag vor dem Wort <b>einzelne</b> und das Schlie&szlig;ende danach ein.</p>
+        <p></p>
+        <p><br><br></p>
+        <p class="task">P-Tag f&uuml;r Paragraph vorhanden</p>
+        <p class="task">B-Tag f&uuml;r Fettdruck vorhanden</p>
+        <p class="task">B-Tag hebt das Wort <b>einzelne</b> hervor</p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea placeholder="Schreibe hier deine Lösung rein..."><h1>Kuscheltiere</h1>
+<p>In einem langen Text kann man gezielt einzelne Worte hervorheben.</p>
+
+
+</textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>

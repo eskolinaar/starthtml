@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (res().find("a").length<1) fail("A-Tag für Link vorhanden");
+            if (res().find("img").length<1) fail("IMG-Tag für Bild vorhanden");
+            if (res().find("a").attr("href")!="http://www.maurer1108.at") fail("A-Tag leitet auf http://www.maurer1108.at weiter");
+            if (res().find("a").find("img").length<1) fail("A-Tag beinhaltet Rudi-Bild");
+            if (res().find("img").attr("src")!="rudi.png") fail("A-Tag beinhaltet Rudi-Bild");
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 8 - Ein Bilder-Link</h1>
+        <p>Man kann auch Bilder mit einem Link versehen, sodass der Klick auf das Bild zum verlinkten Ziel führt.</p>
+        <p>Das Bild zeigen wir mit dem IMG-Tag an. <span class="marked">&lt;img src=&quot;rudi.png&quot;&gt;</span></p>
+        <p>Den Link fügen wir folgendermaßen ein. <span class="marked">&lt;a href=&quot;verkn&uuml;pfte Adresse&quot; target=&quot;_blank&quot;&gt;Angezeigter Link-Text&lt;/a&gt;</span></p>
+        <p>Durch das target-Attribut können wir festlegen, dass sich ein neuer Tab beim Klick &ouml;ffnet. Probier es doch aus.</p>
+        <p>Füge einen Link ein, der als Rudi-Bild angezeigt wird und auf die Seite <span class="marked">http://www.maurer1108.at</span> weiterleitet.</p>
+        <p><br><br></p>
+        <p class="task">IMG-Tag f&uuml;r Bild vorhanden</p>
+        <p class="task">A-Tag für Link vorhanden</p>
+        <p class="task">A-Tag beinhaltet Rudi-Bild</p>
+        <p class="task">A-Tag leitet auf <b>http://www.maurer1108.at</b> weiter</p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea placeholder="Schreibe hier deine Lösung rein..."><h1>Rudi der Hase</h1>
+<p>Ein Hase der die Kinderherzen höher schlagen lässt.</p>
+<a href="verkn&uuml;pfte Adresse" target="_blank">angezeigter Inhalt</a>
+
+</textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>

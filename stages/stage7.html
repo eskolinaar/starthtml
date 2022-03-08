@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (res().find("a").length<1) fail("A-Tag f&uuml;r Link vorhanden");
+            if (res().find("a").attr("href")!="rudi.png") fail("A-Tag zeigt auf <b>rudi.png</b>");
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 7 - Eine Verknüpfung / Ein Link</h1>
+        <p>Wenn man auf einen Link klickt, wechselt der Browser auf den verlinkten Inhalt.</p>
+        <p>Dafür verwendet man das <span class="tag">A</span>-Tag. Der Inhalt zwischen dem öffnenden und schließenden Tag wird weiterhin angezeigt. Im HREF-Attribut geben wir die Adresse an.</p>
+        <p>Als Adresse kann man zum Beispiel ein Bild oder eine URL angeben.</p>
+        <p>Füge folgenden Link an einer Stelle deiner Wahl ein.</p>
+        <p><span class="marked">&lt;a href=&quot;verkn&uuml;pfte Adresse&quot;&gt;Angezeigter Link-Text&lt;/a&gt;</span></gt></p>
+        <p>Setze die verknüpfte Adresse auf <span class="marked">rudi.png</span></p>
+        <p><br><br></p>
+        <p class="task">A-Tag f&uuml;r Link vorhanden</p>
+        <p class="task">A-Tag zeigt auf <b>rudi.png</b></p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea placeholder="Schreibe hier deine Lösung rein..."><h1>Rudi der Hase</h1>
+<p>Ein Hase der die Kinderherzen höher schlagen lässt.</p>
+</textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>

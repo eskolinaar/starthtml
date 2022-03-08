@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (res().find("ul").length<1) fail("UL-Tag für Liste vorhanden");
+            if (res().find("li").length<3) fail("3 LI-Tags für Listen-Elemente vorhanden");
+            if (res().find("li").eq(0).find("a").length<1) fail("Listen-Element 1 enthält einen Link auf rudi.png");
+            if (res().find("li").eq(0).find("a").attr("href")!="rudi.png") fail("Listen-Element 1 enthält einen Link auf rudi.png");
+
+            if (res().find("li").eq(1).find("a").length<1) fail("Listen-Element 2 enthält einen Link auf bruno.png");
+            if (res().find("li").eq(1).find("a").attr("href")!="bruno.png") fail("Listen-Element 2 enthält einen Link auf bruno.png");
+
+            if (res().find("li").eq(2).find("a").length<1) fail("Listen-Element 3 enthält einen Link auf stachli.png");
+            if (res().find("li").eq(2).find("a").attr("href")!="stachli.png") fail("Listen-Element 3 enthält einen Link auf stachli.png");
+
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 10 - Eine Link-Liste</h1>
+        <p>Wir schaffen eine Liste, die auf 3 verschiedene Kuscheltiere zeigt.</p>
+        <p>&lt;ul&gt;<br>
+            &lt;li&gt;&lt;a href=&quot;rudi.png&quot; target=&quot;_blank&quot;&gt;Rudi&lt;/a&gt;&lt;/li&gt;<br>
+            &lt;li&gt;Bruno&lt;/li&gt;<br>
+            &lt;li&gt;Stachli&lt;/li&gt;<br>
+            &lt;/ul&gt;<br>
+        </p>
+        <p>Ergänze die Links auf die Bilder <span class="marked">bruno.png</span> und <span class="marked">stachli.png</span>. Klick die Links an um die Bilder zu öffnen.</p>
+        <p><br><br></p>
+        <p class="task">UL-Tag f&uuml;r Liste vorhanden</p>
+        <p class="task">3 LI-Tags f&uuml;r Listen-Elemente vorhanden</p>
+        <p class="task">Listen-Element 1 zeigt auf das Rudi-Bild</p>
+        <p class="task">Listen-Element 2 zeigt auf das Bruno-Bild</p>
+        <p class="task">Listen-Element 3 zeigt auf das Stachli-Bild</p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea placeholder="Schreibe hier deine Lösung rein..."><h1>Kuscheltiere</h1>
+<p>Wir schaffen eine Liste, die auf 3 verschiedene Kuscheltiere zeigt.</p>
+<ul>
+<li><a href="rudi.png" target="_blank">Rudi</a></li>
+<li>Bruno</li>
+<li>Stachli</li>
+</ul>
+
+</textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>

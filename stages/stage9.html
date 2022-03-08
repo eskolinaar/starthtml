@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (res().find("ul").length<1) fail("UL-Tag für Liste vorhanden");
+            if (res().find("li").length<4) fail("4 LI-Tags für Listen-Elemente vorhanden");
+            if (res().find("li").eq(1).text()!="Fredi") fail("Fredi steht an 2ter Stelle");
+            if (res().find("li").eq(2).text()!="Max") fail("Max steht an 3ter Stelle");
+            if (res().find("li").eq(3).text()!="Manni") fail("Manni steht an 4ter Stelle");
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 9 - Eine Liste</h1>
+        <p>Listen finden vielf&auml;ltige Anwendung in HTML-Seiten. Hier ist ein Beispiel für eine Liste mit 3 Eintr&auml;gen</p>
+        <p>&lt;ul&gt;<br>
+            &lt;li&gt;Rudi&lt;/li&gt;<br>
+            &lt;li&gt;Fredi&lt;/li&gt;<br>
+            &lt;li&gt;Manni&lt;/li&gt;<br>
+            &lt;/ul&gt;<br>
+        </p>
+        <p>Füge den Hasen <b>Max</b> als Listen-Element zwischen Fredi und Manni hinzu.</p>
+        <p><br><br></p>
+        <p class="task">UL-Tag f&uuml;r Liste vorhanden</p>
+        <p class="task">4 LI-Tags f&uuml;r Listen-Elemente vorhanden</p>
+        <p class="task">Fredi steht an 2ter Stelle</p>
+        <p class="task">Max steht an 3ter Stelle</p>
+        <p class="task">Manni steht an 4ter Stelle</p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea placeholder="Schreibe hier deine Lösung rein..."><h1>Hasenstall</h1>
+<p>Ein Rudel Hasen passt auf unser Zuhause auf. Sie hoppeln und verstecken sich. Sie knuddeln und kuscheln gerne.</p>
+<ul>
+<li>Rudi</li>
+<li>Fredi</li>
+<li>Manni</li>
+</ul>
+
+</textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>
