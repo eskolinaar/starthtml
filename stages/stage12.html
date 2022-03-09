@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../scripts/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        #exercise_result div {
+            margin: 10px 10px 20px 10px;
+            padding: 10px 52px;
+            border: 2px solid yellowgreen;
+            border-radius: 5px;
+            box-shadow: 0px 0px 8px #000;
+            min-height: 140px;
+            background-color: #ddd;
+        }
+    </style>
+    <script src="../scripts/main.js"></script>
+    <script>
+        window.test=() => {
+            initTest();
+            if (res().find("div").length!=2) fail("2 DIV-Tags für Bereiche vorhanden");
+            if (res().find("div h2").length!=2) fail("Jeweils eine H2-Überschrift und ein Paragraph befinden sich in jedem der Bereiche.");
+            if (res().find("div h2 + p").length!=2) fail("Jeweils eine H2-Überschrift und ein Paragraph befinden sich in jedem der Bereiche.");
+            elseCorrect();
+        }
+    </script>
+</head>
+<body>
+<div id="headline">
+    <button class="back">Zur&uuml;ck</button>
+    <button class="index">&Uuml;bersicht</button>
+    <button class="test">Testen</button>
+    <span class="clear"></span>
+</div>
+<div class="flex3">
+    <div id="exercise_description">
+        <h1>Schritt 12 - Bereiche</h1>
+        <p>Das <span class="tag">DIV</span>-Tag erlaubt es Bereiche zu definieren um zusammengeh&ouml;rige Informationen zu gruppieren.</p>
+        <p>Erstelle mindestens 2 Bereiche.</p>
+        <p>Bereiche spielen au&szlig;erdem eine wichtige Rolle bei der visuellen Gestaltung von Seiten mit CSS. Für die aktuelle Seite habe ich einen Stil für Bereiche vordefiniert.</p>
+        <p><br><br></p>
+        <p class="task">2 DIV-Tags f&uuml;r Bereiche vorhanden</p>
+        <p class="task">Jeweils eine H2-Überschrift und ein Paragraph befinden sich in jedem der Bereiche.</p>
+    </div>
+    <div id="exercise_workspace">
+        <textarea placeholder="Schreibe hier deine Lösung rein...">
+<h1>Kuscheltiere</h1>
+<h2>Rudi</h2>
+<p>Ein abenteuerlustiger Hase der gerne durch die ganze Wohnung hoppelt, aber auch wieder zurückkehrt um zu kuscheln.</p>
+<h2>Wuschi</h2>
+<p>Ein alter aber immer noch frecher Hund der in der Nacht schlechte Tr&auml;ume verjagd.</p>
+
+</textarea>
+    </div>
+    <div id="exercise_result"></div>
+</div>
+<div id="feedback"></div>
+</body>
+</html>
